@@ -1,0 +1,33 @@
+{
+    "name": "Replify",
+    "description": "Ai powerd Email Reply Generator",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions":["activeTab,storage"],
+    "host_Permissions":[
+        "http://localhost:8080/api/email/generate",
+        "*://mail.google.com/*"
+    ],
+    "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "*://mail.google.com/*"
+      ],
+      "css":["content.css"],
+      "run_at":"document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "icons/*" ],
+      "matches": [ "*://mail.google.com/*"]
+    }
+  ],
+    "action": {
+      "default_popup": "hello.html",
+      "default_icon": "hello_extensions.png"
+    }
+  }
