@@ -11,7 +11,7 @@
     "content_scripts": [
     {
       "js": [
-        "content.js"
+        "content.js" 
       ],
       "matches": [
         "*://mail.google.com/*"
